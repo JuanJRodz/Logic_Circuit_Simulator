@@ -1,0 +1,2 @@
+# Logic_Circuit_Simulator-
+Your group has been tasked with making a simplified backend code for a GUI that simulates digital logic systems (like LogicWorks.) Note the task at hand is not the GUI itself, rather this project focuses on programming the functionality behind the system. In other words, you will have to program how the different logic components behave and how these interact with each other. This means your team will have to plan, communicate, and distribute the workload if you want to do the project in an efficient and timely manner.
