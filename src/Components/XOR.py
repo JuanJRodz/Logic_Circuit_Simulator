@@ -3,7 +3,7 @@ class XOR:
         
         self.name = name 
         
-    def function(self, x = [], y = [], z= [], zz= []):
+    def function(self, x = [], y = [], z= [], zz= [],**): # ** Research for unlimited inputs
         one = 0
         list_inputs = x + y + z + zz
         num_inputs = len(list_inputs)
