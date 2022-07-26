@@ -10,17 +10,7 @@ class AND:
         for i in range(len(list_inputs)):
             if list_inputs[i] == 0:
                 return 0
-        return 1
-            
-    #def function(self, x = [], y = [], z= [], zz= []):
-        
-        list_inputs = x + y + z + zz
-        num_inputs = len(list_inputs)
-        
-        for i in range(len(list_inputs)):
-            if list_inputs[i] == 0:
-                return 0
-        return 1
+        return 
                 
 a = [1,2,3]
 b = [4]

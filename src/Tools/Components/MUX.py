@@ -3,6 +3,6 @@ class MUX:
         
         self.name = name 
         
-    def function(self, *args):
+    def function(self, *args, a, b ):
         
         

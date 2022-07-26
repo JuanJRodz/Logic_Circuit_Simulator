@@ -11,7 +11,7 @@ class SWITCH:
         if num_var == 1: 
             #Basic Switch Function  
             if self.mode == True: 
-                return input 
+                return input[0] 
             else: 
                 return 0
         elif num_var == 2: 
