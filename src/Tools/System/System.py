@@ -3,7 +3,7 @@ from Components.Constant import CONST
 
 
 class System:
-    def __init__(self, dictionary, connections):
+    def __init__(self, dictionary, itirations):
         
         self.dictionary = dictionary 
         self.connections = connections 
@@ -20,3 +20,5 @@ b = CONST("Señal", 0)
 c = AND("AND1")
     
 connection_dict= {a: [], b: [], c:[a,b]}
+
+print(connection_dict[0])
