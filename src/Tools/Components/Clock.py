@@ -7,12 +7,10 @@ class Clk:
 
         if (loops % 2) == 0:
                 
-                loops -= 1
-                return 1 
+            return 1 
             
         else:
                 
-            loops -= 1
             return 0 
             
 a = Clk("Clk1")
