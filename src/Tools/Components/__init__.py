@@ -21,3 +21,12 @@ from .NOR import NOR
 from .OR import OR
 #from .USR import 
 from .XOR import XOR
+
+#Here you will introduce the logic circuit components you want to use
+
+components = ["AND", "OR"]
+Inputs 
+
+for i in components 
+    if i == "AND"
+        AND
