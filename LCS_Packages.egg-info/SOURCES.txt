@@ -1,0 +1,6 @@
+README.md
+setup.py
+LCS_Packages.egg-info/PKG-INFO
+LCS_Packages.egg-info/SOURCES.txt
+LCS_Packages.egg-info/dependency_links.txt
+LCS_Packages.egg-info/top_level.txt

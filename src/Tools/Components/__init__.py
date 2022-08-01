@@ -1,8 +1,7 @@
 
 
 __all__ = ["AND",
-           "Clock",
-           "Constant_Output",
+           "Clk",
            "CONST",
            "INVERTER",
            "NAND",
@@ -12,8 +11,7 @@ __all__ = ["AND",
            "XOR"]
 
 from .AND import AND 
-# from .Clock import 
-# from .Constant_Output import 
+from .Clock import Clk
 from .Constant import CONST
 from .Inverter import INVERTER 
 from .NAND import NAND
