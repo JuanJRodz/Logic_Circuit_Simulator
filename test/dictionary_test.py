@@ -1,4 +1,5 @@
 from src.Tools.Components import *
+from src.Tools.System import *
 
 a = CONST("Entrada", 1)   
 b = CONST("Señal", 0)
