@@ -1,5 +1,26 @@
-from Components.AND import AND
-from Components.Constant import CONST
+class AND:
+    def __init__(self, name):
+        
+        self.name = name 
+        
+    def function(self, *args):
+        
+        list_inputs = args
+        
+        for i in range(len(list_inputs)):
+            if list_inputs[i] == 0:
+                return 0
+        return 1
+
+class CONST:
+    def __init__(self, name, constant):
+        
+        self.name = name
+        self.constant = constant
+     
+    #Function that outputs the constant given
+    def function(self):
+        return self.constant 
 
 
 class System:
@@ -12,7 +33,7 @@ class System:
         
         for key in dictionary:
             
-            key.function
+            print(key.function)
         
     
 a = CONST("Entrada", 1)   
@@ -20,5 +41,9 @@ b = CONST("Señal", 0)
 c = AND("AND1")
     
 connection_dict= {a: [], b: [], c:[a,b]}
-
-print(connection_dict[0])
+for key, value in connection_dict.items:
+    
+    x = key.function(value)      
+    
+    print(x)
+    

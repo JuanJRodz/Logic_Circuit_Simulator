@@ -22,9 +22,9 @@ from .XOR import XOR
 
 #Here you will introduce the logic circuit components you want to use
 
-components = ["AND", "OR"]
-Inputs 
+#components = ["AND", "OR"]
+#Inputs 
 
-for i in components 
-    if i == "AND"
-        AND
+#for i in components 
+#    if i == "AND"
+#        AND
