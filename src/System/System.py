@@ -37,13 +37,29 @@ class System:
         
     
 a = CONST("Entrada", 1)   
-b = CONST("Señal", 0)
+b = CONST("Señal", 1)
 c = AND("AND1")
     
 connection_dict= {a: [], b: [], c:[a,b]}
-for key, value in connection_dict.items:
+
+iter_dict = connection_dict
+
+for key, value in iter_dict.items():
     
-    x = key.function(value)      
+    v_list = []             
+    print(iter_dict)
     
-    print(x)
+    if not value == None:                      #Checks arguments
+        num_elem = len(value)
+        for i in value:
+            e = iter_dict[i] 
+            v_list.append(e)   
+    else: 
+        v_list = None     
+    
+        
+    x = key.function(*v_list)                  #Runs functions
+    connection_dict[key] = x                   #Updates Value
+    
+    print(x,value,iter_dict)                    #Checks Dict
     
