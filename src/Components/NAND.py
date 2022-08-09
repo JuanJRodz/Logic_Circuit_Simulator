@@ -3,8 +3,8 @@ class NAND:
         
         self.name = name 
         
-    def function(self, x, y):
-        if(x and y) >= 1:
+    def function(self, *inputs):   #Only accepts two inputs 
+        if(inputs[0] and inputs[1]) >= 1:
             return 0
         else:
             return 1       

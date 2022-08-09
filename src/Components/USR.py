@@ -5,9 +5,10 @@ class USR:
         
     def function(self, inputs, s1, s0):
         
-        while len(inputs) < 4: 
-            args = args + [0] 
-
+        #while len(inputs) < 4: 
+        #    args = args + [0] 
+        s1 = inputs[4]
+        s0 = inputs[5]
      
         if s1 == 0 and s0 == 1: #Shift right
             del inputs[3]

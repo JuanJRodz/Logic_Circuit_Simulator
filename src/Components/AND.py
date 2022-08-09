@@ -6,7 +6,7 @@ class AND:
     def function(self, *args):
         
         list_inputs = args
-        
+        print (args)
         for i in range(len(list_inputs)):
             if list_inputs[i] == 0:
                 return 0

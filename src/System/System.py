@@ -42,24 +42,30 @@ c = AND("AND1")
     
 connection_dict= {a: [], b: [], c:[a,b]}
 
-iter_dict = connection_dict
 
-for key, value in iter_dict.items():
+n = 10 
+
+while n > 0:
+    iter_dict = connection_dict                   #
     
-    v_list = []             
-    print(iter_dict)
+    for key, value in iter_dict.items():
     
-    if not value == None:                      #Checks arguments
-        num_elem = len(value)
-        for i in value:
-            e = iter_dict[i] 
-            v_list.append(e)   
-    else: 
-        v_list = None     
+        v_list = []             
+        print(iter_dict)
+    
+        if not value == None:                      #Checks arguments
+            num_elem = len(value)
+            for i in value:
+                e = iter_dict[i] 
+                v_list.append(e)   
+        else: 
+            v_list = None     
     
         
-    x = key.function(*v_list)                  #Runs functions
-    connection_dict[key] = x                   #Updates Value
+        x = key.function(*v_list)                  #Runs functions
+        connection_dict[key] = x                   #Updates Value
     
-    print(x,value,iter_dict)                    #Checks Dict
+    print('---',x,value,iter_dict,'This is an iteration') #Checks Dict
     
+    n -= 1
+    print (n)

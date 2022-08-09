@@ -3,7 +3,7 @@ class Clk:
         
         self.name = name 
         
-    def function(self, loops):
+    def function(self, loops): #Must input the number of iterations 
 
         if (loops % 2) == 0:
                 

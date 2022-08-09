@@ -4,22 +4,21 @@ class OR:
         self.name = name 
         
     def function(self, *args):
-        
-        list_inputs = x + y + z + zz
+        one = 0
+        list_inputs = list(args)
         num_inputs = len(list_inputs)
-        
-        for i in range(len(list_inputs)):
-            if list_inputs[i] >= 1:
-                return 1
-        return 0
-                
-a = [0,0,0]
-b = [0]
-z = [0]
+        for i in range(num_inputs):
+            if list_inputs[i] >= 1: 
+                list_inputs[i] = 1
+                one = one + 1
 
-c = a + b + z
+        if one == 0:
+            return 0
+        else:
+            return 1     
+                
 
 test = OR("OR1")
 
-w=test.function(c, z)
+w=test.function(0,0,0)
 print(w)
