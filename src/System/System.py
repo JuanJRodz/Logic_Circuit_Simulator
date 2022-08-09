@@ -24,14 +24,14 @@ class CONST:
 
 
 class System:
-    def __init__(self, dictionary, itirations):
+    def __init__(self, dictionary, iterations):
         
         self.dictionary = dictionary 
-        self.connections = connections 
+        self.iterations = iterations 
         
-    def System(self, dictionary, connections):
+    def System(self):
         
-        for key in dictionary:
+        for key in self.dictionary:
             
             print(key.function)
         
@@ -46,7 +46,7 @@ connection_dict= {a: [], b: [], c:[a,b]}
 n = 10 
 
 while n > 0:
-    iter_dict = connection_dict                   #
+    iter_dict = connection_dict                 # Won't run each iteration 
     
     for key, value in iter_dict.items():
     
