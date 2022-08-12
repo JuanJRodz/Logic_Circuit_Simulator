@@ -64,32 +64,39 @@ a = CONST("Entrada", 1)
 b = CONST("Señal", 1)
 c = AND("AND1")
     
-connection_dict= {a: [], b: [], c:[a,b]}
+connection_dict= {a: []}
+#{a: [], b: [], c:[a,b]}
 
+n = 0 
+#fh = open('test.txt', 'w')
 
-n = 10 
-
-while n > 0:
+#fh.write("This text file is a simulation of the system Test\n\n --------------------------------------------------------\n")
+#fh.write('\n Simulation Start\n--------------------------------------------------------\n')
+while n < 10:
+    
     iter_dict = connection_dict                 # Won't run each iteration 
+    #fh.write('\n Run d%:\n' % (n+1))
     
     for key, value in iter_dict.items():
     
         v_list = []             
         print(iter_dict)
-    
+        
         if not value == None:                      #Checks arguments
-            num_elem = len(value)
+            #num_elem = len(value)
             for i in value:
-                e = iter_dict[i] 
-                v_list.append(e)   
+                v_list.append(iter_dict[i])   
         else: 
             v_list = None     
     
         
         x = key.function(*v_list)                  #Runs functions
-        connection_dict[key] = x                   #Updates Value
+        iter_dict[key] = key.function(*v_list)                   #Updates Value  
+        #fh.write(f'\n {key.name} = {x}\n')
+        
+        
     
     print('---',x,value,iter_dict,'This is an iteration') #Checks Dict
     
-    n -= 1
+    n += 1
     print (n)
