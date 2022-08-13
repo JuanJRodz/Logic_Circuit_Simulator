@@ -1,14 +1,29 @@
+from imaplib import Int2AP
+
+
 class MUX:
     def __init__(self, name): 
         
         self.name = name 
+        self.output = 0
         
-    def function(self, *inputs): #Locked to only 4x1 Mux 
+    def function(self, *inputs, *mode): #Locked to only 4x1 Mux 
         
-        #while len(inputs) < 4: 
-        #    args = args + [0] 
-        s1 = inputs[4]
-        s0 = inputs[5]
+        #Reduce size of inputs
+        while len(inputs) < 4: 
+            inputs = inputs[:4]
+        
+        #Reduce size of modes
+        while len(mode) < 2: 
+            mode = mode[:2]
+            
+        I0 = inputs[0]
+        I1 = inputs[1]
+        I2 = inputs[2]
+        I3 = inputs[3]
+        
+        s1 = mode[0]
+        s0 = mode[1]
         
         if not s0 == 0:
             s0 = 1
@@ -17,14 +32,14 @@ class MUX:
             
         if s0 == 0:
             if s1 == 0:
-                return inputs[0]
+                self.output = I0
             else:
-                return inputs[2]
+                self.output = I2
         else: 
             if s1 == 0:
-                return inputs[1]
+                self.output = I1
             else:
-                return inputs[3]
+                self.output = I3
 
 a = MUX("MUX1")
 
