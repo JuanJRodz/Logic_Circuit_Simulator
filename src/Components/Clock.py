@@ -2,16 +2,17 @@ class Clk:
     def __init__(self, name):
         
         self.name = name 
+        self.output = 0
         
     def function(self, loops): #Must input the number of iterations 
 
         if (loops % 2) == 0:
                 
-            return 1 
+            self.output = 1
             
         else:
                 
-            return 0 
+            self.output = 0 
             
 a = Clk("Clk1")
 

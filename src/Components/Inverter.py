@@ -3,13 +3,14 @@ class INVERTER:
         
         self.name = name 
         #self.constant = constant
+        self.output = 0
     
     def function(self, input):   
     
         if input == 0:
-            return 1 
+            self.output = 1
         else:
-            return 0 
+            self.output = 0 
 
 test = INVERTER("INVERTER1", 1)
 

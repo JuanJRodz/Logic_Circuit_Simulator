@@ -3,7 +3,7 @@ class CONST:
         
         self.name = name
         self.constant = constant
-     
+        
     #Function that outputs the constant given
     def function(self):
         return self.constant 
