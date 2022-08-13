@@ -2,15 +2,16 @@ class AND:
     def __init__(self, name):
         
         self.name = name 
+        self.output = 0
         
     def function(self, *args):
         
         list_inputs = args
-        print (args)
-        for i in range(len(list_inputs)):
-            if list_inputs[i] == 0:
-                return 0
-        return 1
+        if 0 in list_inputs:
+            self.output = 0 
+        else:
+            self.output = 1
+        
                 
 a = [1,2,3]
 b = [4]
