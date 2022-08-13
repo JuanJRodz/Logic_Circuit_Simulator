@@ -1,17 +1,17 @@
 class OR:
-    def __init__(self, name):
+    def __init__(self, name, output):
         
         self.name = name 
+        self.output = 0
         
     def function(self, *args):
-        
         list_inputs = x + y + z + zz
-        num_inputs = len(list_inputs)
+        list_value = sum(list_inputs)
+        if list_value == 0:
+            self.output = 0 
+        else:
+            self.output = 1
         
-        for i in range(len(list_inputs)):
-            if list_inputs[i] >= 1:
-                return 1
-        return 0
                 
 a = [0,0,0]
 b = [0]
