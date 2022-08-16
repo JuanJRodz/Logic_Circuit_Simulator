@@ -2,12 +2,12 @@ from imaplib import Int2AP
 
 
 class MUX:
-    def __init__(self, name): 
+    def __init__(self, name, output = 0): 
         
         self.name = name 
-        self.output = 0
+        self.output = output
         
-    def function(self, *inputs, *mode): #Locked to only 4x1 Mux 
+    def function(self, *inputs): #Locked to only 4x1 Mux 
         
         #Reduce size of inputs
         while len(inputs) < 4: 

@@ -1,20 +1,26 @@
 class SWITCH: 
-    def __init__(self, name, mode:bool): 
+    def __init__(self, name, output = 0): 
         
         self.name = name 
-        self.mode = mode 
+        self.output = output
             
     def function(self, *input):
         
+        variables = list(input)
         num_var = len(input)
         
-        if num_var == 1: 
+        if variables(-1) == 0: 
+            pass
+        else: 
+            variables(-1) = 1
+            
+        if num_var == 2: 
             #Basic Switch Function  
-            if self.mode == True: 
+            if input(1) == True: 
                 return input[0] 
             else: 
                 return 0
-        elif num_var == 2: 
+        elif num_var == 3: 
              if self.mode == True:
                  return input[0]
              else:
