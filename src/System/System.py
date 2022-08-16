@@ -64,7 +64,7 @@ a = CONST("Entrada", 1)
 b = CONST("Señal", 1)
 c = AND("AND1")
     
-connection_dict= {a: []}
+connection_dict= {a: [], b:[d ]}
 #{a: [], b: [], c:[a,b]}
 
 n = 0 

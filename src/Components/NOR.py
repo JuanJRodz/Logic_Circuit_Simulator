@@ -1,8 +1,8 @@
 class NOR:
-    def __init__(self, name):
+    def __init__(self, name, output = 0):
         
         self.name = name 
-        self.output = 0
+        self.output = output
         
     def function(self, *inputs):   #Only accepts two inputs 
         if(inputs[0] or inputs[1]) == 1:

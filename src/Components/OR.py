@@ -1,8 +1,8 @@
 class OR:
-    def __init__(self, name, output):
+    def __init__(self, name, output = 0):
         
         self.name = name 
-        self.output = 0
+        self.output = output
         
     def function(self, *args):
         list_inputs = x + y + z + zz

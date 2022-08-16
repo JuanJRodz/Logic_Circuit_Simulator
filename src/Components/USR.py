@@ -1,8 +1,8 @@
 class USR:
-    def __init__(self, name): 
+    def __init__(self, name, output = 0): 
         
         self.name = name 
-        
+        self. output = output
     def function(self, inputs, s1, s0):
         
         #while len(inputs) < 4: 
