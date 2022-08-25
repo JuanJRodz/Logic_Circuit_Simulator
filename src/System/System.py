@@ -64,39 +64,55 @@ a = CONST("Entrada", 1)
 b = CONST("Señal", 1)
 c = AND("AND1")
     
-connection_dict= {a: [], b:[d ]}
+connection_dict= {a: [], b: [], c:[a,b]}
 #{a: [], b: [], c:[a,b]}
 
-n = 0 
-#fh = open('test.txt', 'w')
+comp_list = list(connection_dict.keys())
+comp_ran = []
 
-#fh.write("This text file is a simulation of the system Test\n\n --------------------------------------------------------\n")
-#fh.write('\n Simulation Start\n--------------------------------------------------------\n')
-while n < 10:
-    
-    iter_dict = connection_dict                 # Won't run each iteration 
-    #fh.write('\n Run d%:\n' % (n+1))
-    
-    for key, value in iter_dict.items():
-    
-        v_list = []             
-        print(iter_dict)
-        
-        if not value == None:                      #Checks arguments
-            #num_elem = len(value)
-            for i in value:
-                v_list.append(iter_dict[i])   
-        else: 
-            v_list = None     
-    
-        
-        x = key.function(*v_list)                  #Runs functions
-        iter_dict[key] = key.function(*v_list)                   #Updates Value  
-        #fh.write(f'\n {key.name} = {x}\n')
+for comp, input in connection_dict.items():
+    print ("---------",comp_list)
+    if input == []:
+        comp.function()
+        comp_ran.append(comp)
+        print(comp_ran)
+        comp_list.remove(comp) 
         
         
+while not (comp_list == []):
+    for comp in comp_list:
+        connection_dict[comp] == comp_ran
+        
+# n = 0 
+# #fh = open('test.txt', 'w')
+
+# #fh.write("This text file is a simulation of the system Test\n\n --------------------------------------------------------\n")
+# #fh.write('\n Simulation Start\n--------------------------------------------------------\n')
+# while n < 10:
     
-    print('---',x,value,iter_dict,'This is an iteration') #Checks Dict
+#     iter_dict = connection_dict                 # Won't run each iteration 
+#     #fh.write('\n Run d%:\n' % (n+1))
     
-    n += 1
-    print (n)
+#     for key, value in iter_dict.items():
+    
+#         v_list = []             
+#         print(iter_dict)
+        
+#         if not value == None:                      #Checks arguments
+#             #num_elem = len(value)
+#             for i in value:
+#                 v_list.append(iter_dict[i])   
+#         else: 
+#             v_list = None     
+    
+        
+#         x = key.function(*v_list)                  #Runs functions
+#         iter_dict[key] = key.function(*v_list)                   #Updates Value  
+#         #fh.write(f'\n {key.name} = {x}\n')
+        
+        
+    
+#     print('---',x,value,iter_dict,'This is an iteration') #Checks Dict
+    
+#     n += 1
+#     print(n)
