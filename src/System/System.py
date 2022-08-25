@@ -1,26 +1,26 @@
 class AND:
-    def __init__(self, name):
+    def __init__(self, name, output = 0):
         
         self.name = name 
+        self.output = output
         
     def function(self, *args):
         
         list_inputs = args
+        if 0 in list_inputs:
+            self.output = 0 
+        else:
+            self.output = 1
         
-        for i in range(len(list_inputs)):
-            if list_inputs[i] == 0:
-                return 0
-        return 1
-
 class CONST:
-    def __init__(self, name, constant):
+    def __init__(self, name, output):
         
         self.name = name
-        self.constant = constant
-     
+        self.output = output
+        
     #Function that outputs the constant given
     def function(self):
-        return self.constant 
+        self.output = self.output 
 
 
 class System:
@@ -69,20 +69,36 @@ connection_dict= {a: [], b: [], c:[a,b]}
 
 comp_list = list(connection_dict.keys())
 comp_ran = []
+comp_layers = []
 
 for comp, input in connection_dict.items():
-    print ("---------",comp_list)
+    #print ("---------",comp_list)
     if input == []:
         comp.function()
         comp_ran.append(comp)
         print(comp_ran)
         comp_list.remove(comp) 
-        
+    
+    comp_layers.append(comp_ran)
         
 while not (comp_list == []):
+    i = 0 
     for comp in comp_list:
-        connection_dict[comp] == comp_ran
+        if all(item in list(connection_dict[comp]) for item in comp_ran):   
+            comp_out = []
+            for used in list(connection_dict[comp]):
+                comp_out.append(used.output)
+                
+            comp.function(comp_out)
+            comp_ran.append(comp)
+            comp_list.remove(comp)
+            
+        i -= 1
         
+        comp_layers.append(comp_ran[i:-1])
+
+print(comp_layers)
+          
 # n = 0 
 # #fh = open('test.txt', 'w')
 

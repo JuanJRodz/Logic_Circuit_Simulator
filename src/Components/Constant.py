@@ -1,12 +1,12 @@
 class CONST:
-    def __init__(self, name, constant):
+    def __init__(self, name, output):
         
         self.name = name
-        self.constant = constant
+        self.output = output
         
     #Function that outputs the constant given
     def function(self):
-        return self.constant 
+        self.output = self.output 
 
 
 #Test
