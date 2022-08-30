@@ -3,6 +3,9 @@ class NAND:
         
         self.name = name 
         self.output = output
+    
+    def __str__(self):
+        return f'{self.name} Output: {self.output}'
         
     def function(self, *inputs):   #Only accepts two inputs 
         if(inputs[0] and inputs[1]) >= 1:

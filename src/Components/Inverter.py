@@ -5,6 +5,9 @@ class INVERTER:
         #self.constant = constant
         self.output = 0
     
+    def __str__(self):
+        return f'{self.name} Output: {self.output}'
+    
     def function(self, input):   
     
         if input == 0:

@@ -4,6 +4,9 @@ class XOR:
         self.name = name 
         self.output = output
         
+    def __str__(self):
+        return f'{self.name} Output: {self.output}'
+        
     def function(self, *args):  # ** Research for unlimited inputs
         list_inputs = list(args)
         num_inputs = len(list_inputs)

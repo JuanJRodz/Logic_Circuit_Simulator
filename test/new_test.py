@@ -4,6 +4,18 @@
 # else:
 #     print(1)
 
-connection_dict= {"a": [], "b": [], "c":["a","b"]}
+# connection_dict= {"a": [], "b": [], "c":["a","b"]}
 
-print(connection_dict.values())
+# print(connection_dict.values())
+
+# f= open("test.txt","w+")
+
+# for i in range(10):
+#         f.write("This is line %d\r\n" % (i+1))
+
+# f.close()
+
+x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+y = []
+
+print(x[-2:])  

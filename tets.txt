@@ -1,0 +1,4 @@
+Initial state for all components:
+Entrada Output: 1
+Señal Output: 1
+AND1 Output: 0

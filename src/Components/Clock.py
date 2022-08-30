@@ -3,6 +3,10 @@ class Clk:
         
         self.name = name 
         self.output = 0
+    
+    def __str__(self):
+        return f'{self.name} Output: {self.output}'
+    
         
     def function(self, loops): #Must input the number of iterations 
 

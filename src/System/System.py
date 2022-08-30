@@ -4,6 +4,9 @@ class AND:
         self.name = name 
         self.output = output
         
+    def __str__(self):
+        return f'{self.name} Output: {self.output}'
+    
     def function(self, *args):
         
         list_inputs = args
@@ -17,6 +20,9 @@ class CONST:
         
         self.name = name
         self.output = output
+    
+    def __str__(self):
+        return f'{self.name} Output: {self.output}'
         
     #Function that outputs the constant given
     def function(self):
@@ -66,11 +72,18 @@ c = AND("AND1")
     
 connection_dict= {a: [], b: [], c:[a,b]}
 #{a: [], b: [], c:[a,b]}
+f = open('tets.txt','w')
 
 comp_list = list(connection_dict.keys())
 comp_ran = []
 comp_layers = []
 
+f.write('Initial state for all components:\r\n')
+for i in comp_list:
+    f.write(f"{i.__str__ ()}\r\n")
+
+f.write('-------------------------------------------------\r\n')
+    
 for comp, input in connection_dict.items():
     #print ("---------",comp_list)
     if input == []:
@@ -79,7 +92,7 @@ for comp, input in connection_dict.items():
         print(comp_ran)
         comp_list.remove(comp) 
     
-    comp_layers.append(comp_ran)
+comp_layers.append(comp_ran)
         
 while not (comp_list == []):
     i = 0 
@@ -95,9 +108,9 @@ while not (comp_list == []):
             
         i -= 1
         
-        comp_layers.append(comp_ran[i:-1])
+        comp_layers.append(comp_ran[i:])
 
-print(comp_layers)
+f.write
           
 # n = 0 
 # #fh = open('test.txt', 'w')

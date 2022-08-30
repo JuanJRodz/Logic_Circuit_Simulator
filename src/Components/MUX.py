@@ -6,7 +6,10 @@ class MUX:
         
         self.name = name 
         self.output = output
-        
+    
+    def __str__(self):
+        return f'{self.name} Output: {self.output}'
+    
     def function(self, *inputs): #Locked to only 4x1 Mux 
         
         #Reduce size of inputs

@@ -5,6 +5,9 @@ class USR:
         self.output = output
         self.register = register
         
+    def __str__(self):
+        return f'{self.name} Output: {self.output} Current State: {self.register}'
+        
     def function(self, *inputs):
         #while len(inputs) < 4: 
         #    args = args + [0]
