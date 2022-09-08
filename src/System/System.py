@@ -82,8 +82,6 @@ f.write('Initial state for all components:\r\n')
 for i in comp_list:
     f.write(f"{i.__str__ ()}\r\n")
 
-f.write('-------------------------------------------------\r\n')
-    
 for comp, input in connection_dict.items():
     #print ("---------",comp_list)
     if input == []:
@@ -91,9 +89,10 @@ for comp, input in connection_dict.items():
         comp_ran.append(comp)
         print(comp_ran)
         comp_list.remove(comp) 
-    
+print("1: ", comp_ran)   
 comp_layers.append(comp_ran)
-        
+print("2: ", comp_layers)  
+      
 while not (comp_list == []):
     i = 0 
     for comp in comp_list:
@@ -107,10 +106,23 @@ while not (comp_list == []):
             comp_list.remove(comp)
             
         i -= 1
-        
+        print("3: ", comp_ran[i:])
+        print("4: ", comp_layers) 
         comp_layers.append(comp_ran[i:])
+        
+print("5: ", comp_layers)        
+f.write('The following is the network layot for the system:\r\n')
+for layer in comp_layers:
+    num = 1
+    f.write(f"Layer {num}:\n")
+    f.write(f"{layer}\r\n")
+    num += 1
+    
+f.write('-------------------------------------------------\r\n')
 
-f.write
+f.write('Simulation Start\r\n')    
+
+f.write('-------------------------------------------------\r\n')
           
 # n = 0 
 # #fh = open('test.txt', 'w')
