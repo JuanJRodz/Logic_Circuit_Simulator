@@ -4,6 +4,9 @@ class AND:
         self.name = name 
         self.output = output
         
+    def __repr__(self):
+        return self.name  
+       
     def __str__(self):
         return f'{self.name} Output: {self.output}'
     
@@ -20,6 +23,9 @@ class CONST:
         
         self.name = name
         self.output = output
+    
+    def __repr__(self):
+        return self.name 
     
     def __str__(self):
         return f'{self.name} Output: {self.output}'
@@ -67,10 +73,11 @@ class System:
         
     
 a = CONST("Entrada", 1)   
-b = CONST("Señal", 1)
+b = CONST("Señal 1", 1)
+d = CONST("Señal 2", 0)
 c = AND("AND1")
     
-connection_dict= {a: [], b: [], c:[a,b]}
+connection_dict= {a: [], b: [], c: [a,b,d] }
 #{a: [], b: [], c:[a,b]}
 f = open('tets.txt','w')
 
@@ -100,7 +107,8 @@ while not (comp_list == []):
             comp_out = []
             for used in list(connection_dict[comp]):
                 comp_out.append(used.output)
-                
+            
+            print("comp_out = ",comp_out)    
             comp.function(comp_out)
             comp_ran.append(comp)
             comp_list.remove(comp)

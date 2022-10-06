@@ -1,12 +1,12 @@
 Initial state for all components:
 Entrada Output: 1
-Señal Output: 1
+Señal 1 Output: 1
 AND1 Output: 0
 The following is the network layot for the system:
 Layer 1:
-[<__main__.CONST object at 0x0000018198822FD0>, <__main__.CONST object at 0x0000018198822F70>, <__main__.AND object at 0x0000018198822D60>]
+[Entrada, Señal 1, AND1]
 Layer 1:
-[<__main__.AND object at 0x0000018198822D60>]
+[AND1]
 -------------------------------------------------
 Simulation Start
 -------------------------------------------------
